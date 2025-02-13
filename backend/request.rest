@@ -1,0 +1,220 @@
+// ADMIN PAGES
+
+//Create Admin
+###
+POST  http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Admin",
+    "email": "admin@gmail.com",
+    "password": "1234567",
+    "confPassword": "1234567",
+    "role": "admin"
+}
+
+//Create User
+###
+POST  http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "User",
+    "email": "user@gmail.com",
+    "password": "1234567",
+    "confPassword": "1234567",
+    "role": "user"
+}
+
+###
+//Get All Users
+GET http://localhost:5000/users
+
+###
+//Get Users By Id
+GET http://localhost:5000/users/81d90a5f-1458-4ecf-aaf1-6595699929a3
+###
+// Update User
+PATCH  http://localhost:5000/users/81d90a5f-1458-4ecf-aaf1-6595699929a3
+Content-Type: application/json
+
+{
+    "name": "User",
+    "email": "user@gmail.com",
+    "password": "1234567",
+    "confPassword": "1234567",
+    "role": "user"
+}
+
+###
+// Delete User
+DELETE http://localhost:5000/users/c9e30aca-f92a-4797-8a2b-4861d091299b
+
+###
+// Login Admin
+POST  http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "1234567"
+}
+###
+// Login User
+POST  http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "user@gmail.com",
+    "password": "1234567"
+}
+
+###
+// User LoggedIn
+GET  http://localhost:5000/me
+
+###
+// LogOut
+DELETE   http://localhost:5000/logout
+
+###
+//Get All Animes
+GET http://localhost:5000/animes
+
+###
+//Get Anime By Id
+GET http://localhost:5000/animes/b412721a-27f7-4e1c-aca6-2fff2bded512
+
+###
+// Post Anime
+POST  http://localhost:5000/animes
+Content-Type: application/json
+
+{
+    "title": "Anime 4",
+    "deskripsi": "Anime",
+    "image": "https://upload.wikimedia.org/wikipedia/id/thumb/9/90/One_Piece%2C_Volume_61_Cover_%28Japanese%29.jpg/220px-One_Piece%2C_Volume_61_Cover_%28Japanese%29.jpg",
+    "status": "ONGOING",
+    "genreId": 3
+}
+
+###
+// Update Anime
+PATCH   http://localhost:5000/animes/c9e76a1a-dac5-490c-b465-54969aedef1b
+Content-Type: application/json
+
+{
+    "title": "Anime 1",
+    "deskripsi": "Anime",
+    "image": "https://upload.wikimedia.org/wikipedia/id/thumb/9/90/One_Piece%2C_Volume_61_Cover_%28Japanese%29.jpg/220px-One_Piece%2C_Volume_61_Cover_%28Japanese%29.jpg",
+    "status": "ONGOING"
+}
+
+###
+// Delete Anime
+DELETE    http://localhost:5000/animes/7b6cf381-5a95-4887-b032-5c55ab55a98c
+
+###
+//Get All Genres
+GET http://localhost:5000/genres
+
+###
+//Get Genres By Id
+GET http://localhost:5000/genres/03031744-2828-42de-a423-5a64cfc7dae3
+
+###
+// Post Genres
+POST  http://localhost:5000/genres
+Content-Type: application/json
+
+{
+    "name": "Sport"
+}
+
+###
+// Update Genre
+PATCH  http://localhost:5000/genres/116af3ba-ee2f-4769-b9cc-6b67bfa89bae
+Content-Type: application/json
+
+{
+    "name": "Sport"
+}
+
+###
+// Delete Genre
+DELETE    http://localhost:5000/genres/b08c038c-df4c-4201-b944-383b7311df7a
+
+###
+//Get All Episodes
+GET http://localhost:5000/episodes
+
+###
+//Get Episode By Id
+GET http://localhost:5000/episodes/a484abda-fe73-4cd0-a467-ab3074aa791a
+
+###
+// Post Episodes
+POST  http://localhost:5000/episodes
+Content-Type: application/json
+
+{
+    "episode": 4,
+    "video_link": "link_4",
+    "animeId": 19
+}
+
+###
+// Post Episodes
+PATCH   http://localhost:5000/episodes/1bfcbd48-e88f-4a91-bbac-f24289ade94b
+Content-Type: application/json
+
+{
+    "episode": 4,
+    "video_link": "link_4 Updated",
+    "animeId": 19
+}
+
+###
+// Delete Episodes
+DELETE    http://localhost:5000/episodes/1bfcbd48-e88f-4a91-bbac-f24289ade94b
+
+###
+//Search Anime
+GET http://localhost:5000/animes?search_query=&page=0&limit=5
+
+###
+//Get All Episodes
+GET http://localhost:5000/episodes?search_query=1&page=0&limit5
+
+// HOMEPAGES
+
+###
+//Home Anime
+GET http://localhost:5000/home/animes?search_query=&page=0&limit=5
+
+###
+//Home Anime By Id
+GET http://localhost:5000/home/animes/23877720-97e8-4451-821b-6b00a573764e?page=0&limit=1
+
+###
+//Home Genres
+GET http://localhost:5000/home/genres
+
+###
+//Home Genre By Id
+GET http://localhost:5000/home/genres/daa0c9bf-1286-4793-863d-d418495f3970
+
+###
+//Home Episodes
+GET http://localhost:5000/home/episodes?search_query=&page=0&limit=5
+
+###
+//Home Episode By Id
+GET http://localhost:5000/home/episodes/ef01944b-ffb4-48c0-8be5-a8c532c905e7
+
+###
+//Home Genres
+GET http://localhost:5000/home/genres?search_query=adventure&page=0&limit=5
+###
+//Home Genres by Id
+GET http://localhost:5000/home/genres/79e2730a-02e3-4148-99d2-3aebdbbc1990?page=1&limit=1
