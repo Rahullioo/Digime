@@ -1,8 +1,8 @@
 .wrap {
 	display: grid;
 	height: 230vh;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: 110px 70px 1fr 100px;
+	grid-template-columns: 0.2fr 1fr 1fr 0.2fr;
+	grid-template-rows: 90px 90px 1fr 100px;
 	grid-template-areas: 
 	"clear1 banner banner clear2"
 	"navbar navbar navbar navbar"
@@ -12,27 +12,33 @@
 }
 
 .banner{
-	width: 728px;
-	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
 	margin-top: 5px;
-	border: 2px solid;
 	grid-area: banner;
 }
 .banner img{
-	height: 100px;
+	box-shadow: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 728px;
+	height: 90px;
 }
 .navbar{
 	border: 2px solid;
 	margin-top: 5px;
 	background: #90EE90;
 	grid-area: navbar;
-	padding: 10px 20px;
+	padding: 5px 10px;
 }
 .navbar li{
 	height: 100%;
 	font-family: "Lucida Console", "Courier New", monospace;
-	font-size: 15px;
+	font-size: 20px;
 }
 .navbar .sidebar{
 	background: whitesmoke;
@@ -63,15 +69,15 @@
 	align-items: center;
 }
 .navbar .logo{
-	border: 2px solid;
-	font-family: "Lucida Console", "Courier New", monospace;
-	font-size: 14pt;
-	font-weight: bold;
-	text-decoration: none;
-	color: black;
+	border: none;
+	width: 180px;
+	height: 50px;
+}
+.navbar .logo img{
+	width: 100%;
+	height: 100%;
 }
 .navbar .menu{
-	border: 2px solid;
 	margin: 0;
 	display: flex;
 	list-style: none;
@@ -82,6 +88,8 @@
 	margin-right: 10px;
 }
 .navbar a {
+	border-style: none none solid none;
+	border-width: 2px;
 	padding: 10px;
 	color: black;
 	text-decoration: none;
@@ -147,7 +155,15 @@
 .content .card .item {
 	display: grid;
 	height: 75vh;
-	grid-template-columns: repeat(5,1fr);
+	grid-template-columns: repeat(5,20%);
+	grid-template-rows: repeat(2, 240px);
+	grid-auto-flow: dense;
+	gap: 4px;
+}
+.content .card .item-animes {
+	display: grid;
+	height: 75vh;
+	grid-template-columns: repeat(5,20%);
 	grid-template-rows: repeat(2, 240px);
 	grid-auto-flow: dense;
 	gap: 4px;
@@ -237,7 +253,7 @@
 	display: grid;
 	height: 90vh;
 	grid-template-columns:1fr 1fr 4fr 4fr 1fr 1fr;
-	grid-template-rows: 1fr minmax(400px, 700px) 30px 20px 150px ;
+	grid-template-rows: 1fr 450px 40px 40px 150px 350px;
 	grid-template-areas:
 	"clear1 title title title title clear2"
 	"clear3 banner1 video video banner2 clear4"
@@ -248,9 +264,11 @@
 	gap: 0.5rem;
 }
 .banner1{
-	width: 130px;
-	height: 600px;
-	border: 2px solid;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
 	grid-area: banner1;
 	
 	
@@ -259,13 +277,18 @@
 }
 .banner1 .ban1{
 	box-shadow: none;
-	height: 100%;
-	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 500px;
+	width: 130px;
 }
 .banner2{
-	width: 130px;
-	height: 600px;
-	border: 2px solid;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
 	grid-area: banner2;
 	
 	
@@ -274,20 +297,38 @@
 }
 .banner2 .ban2{
 	box-shadow: none;
-	height: 100%;
-	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 500px;
+	width: 130px;
+}
+.banner3 {
+	display: none;
+}
+.banner4 {
+	display: none;
 }
 .video {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 700px;
+	height: 400px;
 	border: 2px solid;
 	margin: 0 auto;
 	padding: 10px;
 	grid-area: video;
 }
-.video video {
+.video iframe {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 100%;
 	height: 100%;
 }
-.link-video1{
+.video-container .link-video1{
+	margin-top: 10px;
 	font-family: "Lucida Console", "Courier New", monospace;
 	font-size: 15px;
 	text-decoration: none;
@@ -299,11 +340,10 @@
 	gap: 16px;
 	cursor: pointer;
 }
-.link-video1 p{
+.video-container .link-video1 h3{
 	cursor: default;
-	font-weight: bold;
 }
-.link-video1 button{
+.video-container .link-video1 button{
 	font-family: "Lucida Console", "Courier New", monospace;
 	border: 2px solid;
 	width: 80px;
@@ -314,10 +354,10 @@
 	color: black;
 	cursor: pointer;
 }
-.link-video1 button:hover{
+.video-container .link-video1 button:hover{
 	background: #FFFAF0;
 }
-.link-video2{
+.video-container .link-video2{
 	font-family: "Lucida Console", "Courier New", monospace;
 	font-size: 15px;
 	text-decoration: none;
@@ -329,11 +369,10 @@
 	gap: 16px;
 	cursor: pointer;
 }
-.link-video2 p{
+.video-container .link-video2 h3{
 	cursor: default;
-	font-weight: bold;
 }
-.link-video2 button{
+.video-container .link-video2 button{
 	font-family: "Lucida Console", "Courier New", monospace;
 	border: 2px solid;
 	width: 80px;
@@ -344,7 +383,7 @@
 	color: black;
 	cursor: pointer;
 }
-.link-video2 button:hover{
+.video-container .link-video2 button:hover{
 	background: #FFFAF0;
 }
 .nextprev {
@@ -382,16 +421,23 @@
 	"strimg strdes strdes strdes"
 	"strgenre strdes strdes strdes";
 }
-.stream-deskripsi img {
+.stream-deskripsi .imgdes {
+	box-shadow: none;
+	grid-area: strimg;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.stream-deskripsi .imgdes img{
 	box-shadow: none;
 	border: 2px solid;
-	padding: 10px;
-	grid-area: strimg;
 }
 .stream-deskripsi .genrestatus{
 	font-family: "Lucida Console", "Courier New";
 	padding: 10px;
 	grid-area: strgenre;
+	justify-content: center;
+	align-items: center;
 }
 .stream-deskripsi h3{
 	font-family: "Lucida Console", "Courier New";
@@ -402,7 +448,7 @@
 	justify-content: center;
 	align-items: center;
 }
-.stream-deskripsi p {
+.stream-deskripsi text {
 	font-family: "Lucida Console", "Courier New";
 	padding: 10px;
 	border: 2px solid;
@@ -423,12 +469,18 @@
 	"desimg deskripsi deskripsi deskripsi"
 	"genre deskripsi deskripsi deskripsi";
 }
-.deskripsi img {
+.deskripsi .imgdesanime {
 	box-shadow: none;
-	border: 2px solid;
 	padding: 10px;
 	grid-area: desimg;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	
+}
+.deskripsi .imgdesanime img{
+	box-shadow: none;
+	border: 2px solid;
 }
 .deskripsi .genrestatus{
 	font-family: "Lucida Console", "Courier New";
@@ -444,7 +496,7 @@
 	justify-content: center;
 	align-items: center;
 }
-.deskripsi p {
+.deskripsi text {
 	font-family: "Lucida Console", "Courier New";
 	padding: 10px;
 	border: 2px solid;
@@ -622,9 +674,439 @@
 		font-size: 13px;
 	}
 }
+@media screen and (max-width: 884px){
+	.wrap {
+		height: 300vh;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: 110px 90px 1fr 100px;
+		grid-template-areas: 
+		"clear1 banner banner clear2"
+		"navbar navbar navbar navbar"
+		"content content content content"
+		"footer footer footer footer";
+	}
+	.banner{
+		width: 730px;
+	}
+	.content{
+		grid-area: content;
+	}
+	.content .container{
+		height: 280vh;
+		grid-template-columns:0.5fr 2fr 2fr 2fr 2fr 0.5fr;
+		grid-template-rows: 70px 1800px 0.2fr;
+	}
+	.content .title {
+		font-size: 40px;
+	}
+	.genre-container .genre-title {
+		font-size: 40px;
+	}
+	.content .card .item{
+		height: 110vh;
+		grid-template-columns: repeat(3, 240px);
+		grid-template-rows: repeat(3, 360px);
+	}
+	.content .card .item-animes{
+		height: 110vh;
+		grid-template-columns: repeat(3, 240px);
+		grid-template-rows: repeat(3, 330px);
+	}
+	.content .card input{
+		font-family: "Lucida Console", "Courier New", monospace;
+		height: 30px;
+		margin-bottom: 20px;
+		font-size: large;
+	}
+	.content .item-animes .text{
+		font-size: 25px;
+		width: 210px;
+		justify-content: center;
+		text-align: center;
+	}
+	.content .card button{
+		font-family: "Lucida Console", "Courier New", monospace;
+		background: #90EE90;
+		margin-left: 5px;
+		height: 30px;
+		font-size: large;
+		margin-bottom: 10px;
+		cursor: pointer;
+	}
+	.content img {
+		width: 220px;
+		height: 220px;
+	}
+	.content .text{
+		margin-top: 4px;
+		font-family: "Lucida Console", "Courier New", monospace;
+		font-size: 20px;
+		font-weight: bold;
+		width: 200px;
+		text-align: center;
+		
+	}
+	.content a:hover{
+		color: #2e6b2e;
+	}
+	.content .jam{
+		margin-top: 8px;
+		font-family: "Lucida Console", "Courier New", monospace;
+		color: red;
+		font-size: 20px;
+		width: 200px;
+		text-align: center;
+	}
+	.content .author{
+		font-family: "Lucida Console", "Courier New", monospace;
+		color: blue;
+		font-weight: 500;
+		font-size: 20px;
+		width: 200px;
+		text-align: start;
+	}
+	.genre-container .list {
+		grid-template-columns: repeat(4, 160px);
+		grid-template-rows: repeat(5, 50px);
+	}
+	.content p {
+		font-family: "Lucida Console", "Courier New", monospace;
+		position: absolute;
+		top: 1900px;
+		left: 26%;
+		font-size: 25px;
+	}
+	.pagination {
+		position: absolute;
+		justify-content: center;
+		align-items: center;
+		top: 1800px;
+		left: 215px;
+	}
+	.pagination-page {
+		font-size: 30px; 
+	}
+	.pagination-break { 
+		font-size: 30px;
+	}
+	.pagination-next-prev {
+		border: 2px solid black;
+		background: #90EE90;
+		font-size: 30px;
+	}
+	.list li{
+		font-family: "Lucida Console", "Courier New", monospace;
+		width: 130px;
+		height: 30px;
+		list-style: none;
+		border: 2px solid;
+		background: #90EE90;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.deskripsi .genrestatus p {
+		font-size: 13px;
+	}
+	.stream-deskripsi .genrestatus p{
+		font-size: 13px;
+	}
+	.genre-container {
+		grid-template-columns: 10px 2fr 2fr 2fr 2fr 10px;
+		grid-template-rows: 70px 50px 380px 120px;
+	}
+	.genre-container .list {
+		grid-template-columns: repeat(4, 187px);
+		grid-template-rows: repeat(5, 55px);
+		gap: 10px;
+	}
+	.list li{
+		font-family: "Lucida Console", "Courier New", monospace;
+		width: 150px;
+		height: 50px;
+		list-style: none;
+		border: 2px solid;
+		background: #90EE90;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.list li a{
+		font-size: 20px;
+		text-align: center;
+	}
+	.genre-container p {
+		font-family: "Lucida Console", "Courier New", monospace;
+		position: absolute;
+		top: 800px;
+		left: 26%;
+		font-size: 25px;
+	}
+	.genre-container .pagination {
+		position: absolute;
+		justify-content: center;
+		align-items: center;
+		top: 700px;
+		left: 32%;
+	}
+	.genre-container .pagination-page {
+		font-size: 30px; 
+	}
+	.genre-container .pagination-break { 
+		font-size: 30px;
+	}
+	.genre-container .pagination-next-prev {
+		border: 2px solid black;
+		background: #90EE90;
+		font-size: 30px;
+	}
+	.genre-container .search{
+		grid-area: search;
+		margin-top: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 20px;
+	}
+	.genre-container input{
+		font-family: "Lucida Console", "Courier New", monospace;
+		height: 30px;
+		font-size: large;
+	}
+	.genre-container button{
+		font-family: "Lucida Console", "Courier New", monospace;
+		background: #90EE90;
+		margin-left: 5px;
+		height: 30px;
+		font-size: large;
+		margin-bottom: 10px;
+		cursor: pointer;
+	}
+	.video-container{
+		display: grid;
+		height: 150vh;
+		grid-template-columns:0.2fr 1fr 1fr 1fr 1fr 0.2fr;
+		grid-template-rows: 70px 100px 400px 100px 40px 40px 40px 200px;
+		grid-template-areas:
+		"title title title title title title"
+		"clear1 banner3 banner3 banner3 banner3 clear2"
+		"video video video video video video"
+		"clear4 banner4 banner4 banner4 banner4 clear5"
+		"link1 link1 link1 link1 link1 link1"
+		"link2 link2 link2 link2 link2 link2"
+		"nextprev nextprev nextprev nextprev nextprev nextprev"
+		"streamdes streamdes streamdes streamdes streamdes streamdes";
+		gap: 0.5rem;
+	}
+		
+	.nextprev a{
+		border: 2px solid;
+		font-size: larger;
+		justify-content: center;
+		align-items: center;
+		background: #90EE90;
+		text-decoration: none;
+		color: black;
+	}
+	.banner1{
+		display: none;
+	}
+	.banner2{
+		display: none;
+	}
+	.banner3{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		grid-area: banner3;
+	}
+	.banner3 .ban3{
+		box-shadow: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 728px;
+		height: 90px;
+	}
+	.banner4{
+		margin-top: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		grid-area: banner4;
+	}
+	.banner4 .ban4{
+		box-shadow: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 728px;
+		height: 90px;
+	}
+	.video-container .link-video1 {
+		margin-top: 30px;
+		font-size: larger;
+	}
+	.video-container .link-video1 button{
+		font-size: larger;
+	}
+	.video-container .link-video2 {
+		margin-top: 20px;
+		font-size: larger;
+	}
+	.video-container .link-video2 button{
+		font-size: larger;
+	}
+	.nextprev {
+		margin-top: 20px;
+		font-size: larger;
+		gap: 200px;	
+	}
+	.stream-deskripsi{
+		height: 800px;
+		grid-area: streamdes;
+		margin-top: 10px;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: 1fr 100px 100px 1fr;
+		grid-template-areas: 
+		"strimg strimg strimg strimg strimg strimg"
+		"strtitle strtitle strtitle strtitle strtitle strtitle"
+		"strgenre strgenre strgenre strgenre strgenre strgenre"
+		"strdes strdes strdes strdes strdes strdes"
+	}
+	.stream-deskripsi .imgdes{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 20px;
+	}
+	.stream-deskripsi h3{
+		font-size: 30px;
+	}
+	.stream-deskripsi .genrestatus{
+		display: inline-flex;
+		justify-content: space-evenly;
+		text-align: center;
+		font-size: larger;
+		grid-area: strgenre;
+	}
+	.stream-deskripsi text {
+		grid-area: strdes;
+		justify-content: center;
+		text-align: justify;
+		font-size: larger;
+	}
+	.deskripsi {
+		margin-top: 10px;
+		grid-area: deskripsi;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr 100px 100px 1fr;
+		grid-template-areas:
+		"clear1 clear2 desimg desimg clear3 clear4 " 
+		"destitle destitle destitle destitle destitle destitle"
+		"genre genre genre genre genre genre"
+		"deskripsi deskripsi deskripsi deskripsi deskripsi deskripsi";
+	}
+	.deskripsi img{
+		margin-top: 5px;
+	}
+	.deskripsi h3{
+		font-size: 30px;
+	}
+	.genrestatus{
+		display: inline-flex;
+		justify-content: space-evenly;
+		text-align: center;
+		font-size: larger;
+		grid-area: strgenre;
+	}
+	.deskripsi text {
+		font-size: larger;
+	}
+
+	
+
+}
+@media screen and (max-width: 834px){
+	.content .container{
+		height: 280vh;
+		grid-template-columns:0.5fr 2fr 2fr 2fr 2fr 0.5fr;
+		grid-template-rows: 70px 1800px 0.2fr;
+	}
+	.content .card .item{
+		height: 110vh;
+		grid-template-columns: repeat(3, 220px);
+		grid-template-rows: repeat(3, 350px);
+	}
+	.content .card .item-animes{
+		height: 110vh;
+		grid-template-columns: repeat(3, 220px);
+		grid-template-rows: repeat(3, 330px);
+	}
+	.genre-container .list {
+		grid-template-columns: repeat(4, 170px);
+		grid-template-rows: repeat(5, 55px);
+		gap: 10px;
+	}
+	.genre-container p {
+		font-family: "Lucida Console", "Courier New", monospace;
+		position: absolute;
+		top: 800px;
+		left: 23%;
+		font-size: 25px;
+	}
+	.genre-container .pagination {
+		position: absolute;
+		justify-content: center;
+		align-items: center;
+		top: 700px;
+		left: 240px;
+	}
+}
+@media screen and (max-width: 820px){
+	.content .container{
+		height: 280vh;
+		grid-template-columns:0.3fr 2fr 2fr 2fr 2fr 0.3fr;
+		grid-template-rows: 70px 1800px 0.2fr;
+	}
+	.content .card .item{
+		height: 110vh;
+		grid-template-columns: repeat(3, 230px);
+		grid-template-rows: repeat(3, 350px);
+	}
+	.genre-container .list {
+		grid-template-columns: repeat(4, 165px);
+		grid-template-rows: repeat(5, 55px);
+		gap: 10px;
+	}
+}
+@media screen and (max-width: 800px){
+	.content .container{
+		height: 280vh;
+		grid-template-columns:0.3fr 2fr 2fr 2fr 2fr 0.3fr;
+		grid-template-rows: 70px 1800px 0.2fr;
+	}
+	.content .card .item{
+		height: 110vh;
+		grid-template-columns: repeat(3, 220px);
+		grid-template-rows: repeat(3, 350px);
+	}
+	.genre-container .list {
+		grid-template-columns: repeat(4, 160px);
+		grid-template-rows: repeat(5, 55px);
+		gap: 10px;
+	}
+}
 
 
-@media screen and (max-width: 768px){
+
+/* @media screen and (max-width: 768px){
 	.wrap {
 		height: 250vh;
 		grid-template-rows:100px 60px 1800px 100px;

@@ -2,6 +2,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { FaBars, FaTimes } from 'react-icons/fa'
+import LogoDigime from '../assets/LogoDigime.png' 
 
 const Navbar = () => {
 
@@ -12,7 +13,9 @@ const Navbar = () => {
 	
   return (
 	<div className='container'>
-		<a className='logo' href="/">Logo</a>
+		<a className='logo' href="/">
+			<img src={LogoDigime} alt="" />
+		</a>
 		<ul className='menu'>
 			<li>
 				<NavLink to={"/"}>Home</NavLink>

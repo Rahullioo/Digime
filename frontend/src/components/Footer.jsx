@@ -4,7 +4,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <div>
-      <p>&#9400; Copyright By ... 2025</p>
+      <p>&#9400; Copyright By Digime 2025</p>
     </div>
   )
 }

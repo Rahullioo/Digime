@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import instance from '../api/axiosInstance'
 import { number } from 'prop-types'
+import Banner1 from '../assets/Banner/728x90px.png'
+import Banner2 from '../assets/Banner/130x500px.png'
 
 const Streaming = () => {
 
@@ -66,7 +68,7 @@ const Streaming = () => {
     video[4] = videolink4;
     video[5] = videolink5;
 
-    const videoComponent = document.querySelector('video')
+    const videoComponent = document.querySelector('iframe')
 
     // Server 1
     function link0(){
@@ -95,29 +97,32 @@ const Streaming = () => {
       <div className="title">
         [EP {episodes}] {title} SUB INDO
       </div>
+      <div className="banner1">
+        <a href="#"><img className='ban1' src={Banner2} alt="" /></a>
+      </div>
+      <div className="banner2">
+        <a href="#"><img className='ban2' src={Banner2} alt="" /></a>
+      </div>
       <div className='video'>
-        <video id='video' src={video[0]} controls>
-            <source type='video/mp4' />
-            Sorry, your browser doesnt support embedded videos
-        </video>
+        <iframe src={video[0]} allowFullScreen ></iframe>
+      </div>
+      <div className="banner3">
+        <a href="#"><img className='ban3' src={Banner1} alt="" /></a>
+      </div>
+      <div className="banner4">
+        <a href="#"><img className='ban4' src={Banner1} alt="" /></a>
       </div>
       <div className="link-video1">
-        <p>Server 1</p>
+        <h3>Server 1</h3>
         <button onClick={link0}>480p</button>
         <button onClick={link1}>720p</button>
         <button onClick={link2}>1080p</button>
       </div>
       <div className="link-video2">
-        <p>Server 2</p>
+        <h3>Server 2</h3>
         <button onClick={link3}>480p</button>
         <button onClick={link4}>720p</button>
         <button onClick={link5}>1080p</button>
-      </div>
-      <div className="banner1">
-        <a href="#"><img className='ban1' src="https://img.freepik.com/free-photo/businessman-shouting-by-megaphone_1368-9342.jpg?t=st=1738476106~exp=1738479706~hmac=a587491dad333e0ecf89b5c47df35eb5a3d3ccb06bfa3ea07ac9e35e8310626c&w=360" alt="" /></a>
-      </div>
-      <div className="banner2">
-        <a href="#"><img className='ban2' src="https://img.freepik.com/free-photo/businessman-shouting-by-megaphone_1368-9342.jpg?t=st=1738476106~exp=1738479706~hmac=a587491dad333e0ecf89b5c47df35eb5a3d3ccb06bfa3ea07ac9e35e8310626c&w=360" alt="" /></a>
       </div>
 
         <div className="nextprev">
@@ -130,13 +135,15 @@ const Streaming = () => {
         </div>
 
       <div className="stream-deskripsi">
-        <img src={image} alt="" />
-        <div className="genrestatus">
-          <p>Genre : <strong>{genre}</strong></p>
-          <p>Status : <strong>{status}</strong></p>
+        <div className="imgdes">
+          <img src={image} alt="" />
         </div>
         <h3>{title}</h3>
-        <p>{deskripsi}</p>
+        <div className="genrestatus">
+          <h4>Genre : <strong>{genre}</strong></h4>
+          <h4>Status : <strong>{status}</strong></h4>
+        </div>
+        <text>{deskripsi}</text>
       </div>
     </div>
   )

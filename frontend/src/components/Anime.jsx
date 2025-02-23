@@ -93,13 +93,15 @@ const Anime = () => {
         </nav>
       </div>
       <div className="deskripsi">
-        <img src={image} alt="" />
-        <div className="genrestatus">
-          <p>Genre : <strong>{genre}</strong></p>
-          <p>Status : <strong>{status}</strong></p>
+        <div className="imgdesanime">
+          <img src={image} alt="" />
         </div>
         <h3>{title}</h3>
-        <p>{deskripsi}</p>
+        <div className="genrestatus">
+          <h4>Genre : <strong>{genre}</strong></h4>
+          <h4>Status : <strong>{status}</strong></h4>
+        </div>
+        <text>{deskripsi}</text>
       </div>
     </div>
   )
