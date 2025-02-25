@@ -104,7 +104,7 @@ const Streaming = () => {
         <a href="#"><img className='ban2' src={Banner2} alt="" /></a>
       </div>
       <div className='video'>
-        <iframe src={video[0]} allowFullScreen ></iframe>
+        <iframe src={video[0]} sandbox = "allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation" allow="encrypted-media" allowFullScreen="true" ></iframe>
       </div>
       <div className="banner3">
         <a href="#"><img className='ban3' src={Banner1} alt="" /></a>

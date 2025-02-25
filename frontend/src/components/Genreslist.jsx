@@ -27,7 +27,6 @@ const Genreslist = () => {
 
     //Sorting Genres By Name
     const genresName = genres.sort((a, b)=>a.name.localeCompare(b.name))
-    console.log(genresName)
 
     const searchData = (e)=>{
       e.preventDefault();

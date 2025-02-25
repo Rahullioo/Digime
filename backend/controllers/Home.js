@@ -94,7 +94,7 @@ export const homeAnimeById = async (req, res) => {
                     offset: offset,
                     limit: limit,
                     order: [
-                    ['id', 'DESC']
+                    ['episode', 'DESC']
                     ],
                 },{
                     model: Users,
