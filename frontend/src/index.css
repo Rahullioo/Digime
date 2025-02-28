@@ -499,9 +499,11 @@
 .deskripsi h3{
 	font-family: "Lucida Console", "Courier New";
 	padding: 10px;
+	font-size: 20px;
 	border: 2px solid;
 	grid-area: destitle;
 	display: flex;
+	justify-content: center;
 	text-align: center;
 	overflow: scroll;
 	scrollbar-width: none;
@@ -1285,6 +1287,7 @@
 	}
 	.deskripsi h3{
 		width: 355px;
+		font-size: 23px;
 	}
 	.deskripsi .genrestatus{
 		width: 355px;
@@ -1415,12 +1418,441 @@
 	}
 	
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 390px){
+	.banner{
+		width: 88%;
+	}
+	.banner img{
+		width: 350px;
+	}
+	.navbar{
+		width: 85%;
+	}.content .container{
+		width: 90%;
+	}
+	.content .title{
+		width: 77%;
+	}
+	.content .card input{
+		width: 65%;
+	}
+	.content .card{
+		width: 72%;
+	}
+	.content img{
+		width: 145px;
+	}
+	.content .card .item{
+		grid-template-columns: repeat(2, 150px);
+	}
+	.content .text{
+		width: 145px;
+	}
+	.content .jam{
+		width: 145px;
+	}
+	.content .author{
+		width: 145px;
+	}
+	.pagination {
+		left: 8.5%;
+	}
+	.pagination-next-prev{
+		font-size: 18px;
+	}
+	.content p{
+		left: 4%;
+	}
+	.content .card .item-animes{
+		grid-template-columns: repeat(2, 150px);
+	}
+	.deskripsi .imgdesanime{
+		width: 60%;
+	}
+	.deskripsi h3{
+		width: 80%;
+	}
+	.deskripsi .genrestatus{
+		width: 80%;
+	}
+	.deskripsi text{
+		width: 80%;
+	}
+	.genre-container{
+		width: 90%;
+	}
+	.genre-container .genre-title{
+		width: 93%;
+	}
+	.genre-container .search input{
+		width: 65%;
+	}
+	.genre-container .list{
+		grid-template-columns: repeat(2, 140px);
+	}
+	.list li{
+		margin-left: -14px;
+	}
+	.genre-container p{
+		left: -1%;
+	}
+	.genre-container .pagination-next-prev{
+		font-size: 18px;
+	}
+	.genre-container .pagination{
+		left: 20%;
+	}
+	.video-container{
+		width: 90%;
+	}
+	.video-container .title{
+		width: 79%;
+	}
+	.banner3{
+		width: 80%;
+	}
+	.banner4{
+		width: 80%;
+	}
+	.video-container .video{
+		width: 70%;
+	}
+	.link-video1{
+		width: 80%;
+	}
+	.link-video1 h3{
+		margin-top: 23px;
+		text-align: center;
+		font-size: large;
+		width: 160px;
+	}
+	.link-video2{
+		width: 80%;
+	}
+	.link-video2 h3{
+		margin-top: 23px;
+		text-align: center;
+		font-size: large;
+		width: 160px;
+	}
+	.nextprev{
+		width: 85%;
+		font-size: large;
+		gap: 20px;
+	}
+	.stream-deskripsi .imgdes{
+		width: 85%;
+	}
+	.stream-deskripsi h3{
+		width: 79%;
+	}
+	.stream-deskripsi .genrestatus{
+		width: 79%;
+	}
+	.stream-deskripsi text {
+		width: 79%;
+	}
+
+
+	.footer{
+		width: 85%;
+	}
+}
+@media screen and (max-width: 375px){
+	.banner{
+		width: 83.5%;
+	}
+	.banner img{
+		width: 350px;
+	}
+	.navbar{
+		width: 82%;
+	}.content .container{
+		width: 87%;
+	}
+	.content .title{
+		width: 74%;
+	}
+	.content .card input{
+		width: 65%;
+	}
+	.content .card{
+		width: 69%;
+	}
+	.content img{
+		width: 140px;
+	}
+	.content .card .item{
+		grid-template-columns: repeat(2, 142px);
+	}
+	.deskripsi .imgdesanime{
+		width: 57%;
+	}
+	.deskripsi h3{
+		width: 77%;
+	}
+	.deskripsi .genrestatus{
+		width: 77%;
+	}
+	.deskripsi text{
+		width: 77%;
+	}
+	.content .text{
+		width: 140px;
+	}
+	.content .jam{
+		width: 140px;
+	}
+	.content .author{
+		width: 140px;
+	}
+	.pagination {
+		left: 8.5%;
+	}
+	.pagination-next-prev{
+		font-size: 16.3px;
+	}
+	.content p{
+		left: 3%;
+	}
+	.content .card .item-animes{
+		grid-template-columns: repeat(2, 142px);
+	}
+	.content .card .item-animes .text{
+		width: 140px;
+	}
+	.genre-container{
+		width: 87%;
+	}
+	.genre-container .genre-title{
+		width: 92.5%;
+	}
+	.genre-container .search input{
+		width: 65%;
+	}
+	.genre-container .list{
+		grid-template-columns: repeat(2, 140px);
+	}
+	.list li{
+		margin-left: -20px;
+	}
+	.genre-container p{
+		left: -2%;
+	}
+	.genre-container .pagination-next-prev{
+		font-size: 17.5px;
+	}
+	.genre-container .pagination{
+		left: 20%;
+	}
+	.video-container{
+		width: 87%;
+	}
+	.video-container .title{
+		width: 76.3%;
+	}
+	.banner3{
+		width: 76%;
+	}
+	.banner4{
+		width: 76%;
+	}
+	.video-container .video{
+		width: 68%;
+	}
+	.link-video1{
+		width: 76%;
+	}
+	.link-video1 h3{
+		margin-top: 30px;
+		text-align: center;
+		font-size: large;
+		width: 160px;
+	}
+	.link-video2{
+		width: 76%;
+	}
+	.link-video2 h3{
+		margin-top: 30px;
+		text-align: center;
+		font-size: large;
+		width: 160px;
+	}
+	.nextprev{
+		width: 82%;
+		font-size: large;
+		gap: 20px;
+	}
+	.stream-deskripsi .imgdes{
+		width: 85%;
+	}
+	.stream-deskripsi h3{
+		width: 76%;
+	}
+	.stream-deskripsi .genrestatus{
+		width: 76%;
+	}
+	.stream-deskripsi text {
+		width: 76%;
+	}
+
+
+
+	.footer{
+		width: 82%;
+	}
+}
+@media screen and (max-width: 360px){
+	.banner{
+		width: 78.5%;
+	}
+	.banner img{
+		width: 350px;
+	}
+	.navbar{
+		width: 78.1%;
+	}.content .container{
+		width: 83%;
+	}
+	.content .title{
+		width: 70%;
+	}
+	.content .card input{
+		width: 64%;
+	}
+	.content .card{
+		width: 65%;
+	}
+	.content img{
+		width: 130px;
+		height: 130px;
+	}
+	.content .card .item{
+		grid-template-columns: repeat(2, 134px);
+	}
+	.deskripsi .imgdesanime{
+		width: 50%;
+	}
+	.deskripsi h3{
+		width: 72.5%;
+	}
+	.deskripsi .genrestatus{
+		width: 72.5%;
+	}
+	.deskripsi text{
+		width: 72.5%;
+	}
+	.content .text{
+		width: 130px;
+	}
+	.content .jam{
+		width: 130px;
+	}
+	.content .author{
+		width: 130px;
+	}
+	.pagination {
+		left: 8.5%;
+	}
+	.pagination-next-prev{
+		font-size: 14px;
+	}
+	.content p{
+		left: 1%;
+	}
+	.content .card .item-animes{
+		grid-template-columns: repeat(2, 134px);
+	}
+	.content .card .item-animes .text{
+		width: 130px;
+	}
+	.genre-container{
+		width: 87%;
+	}
+	.genre-container .genre-title{
+		width: 92.5%;
+	}
+	.genre-container .search input{
+		width: 64%;
+	}
+	.genre-container .list{
+		grid-template-columns: repeat(2, 140px);
+	}
+	.list li{
+		margin-left: -20px;
+	}
+	.genre-container p{
+		left: -2%;
+	}
+	.genre-container .pagination-next-prev{
+		font-size: 17.5px;
+	}
+	.genre-container .pagination{
+		left: 20%;
+	}
+	.video-container{
+		width: 83%;
+	}
+	.video-container .title{
+		width: 72%;
+	}
+	.banner3{
+		width: 71%;
+	}
+	.banner4{
+		width: 71%;
+	}
+	.video-container .video{
+		width: 63%;
+	}
+	.link-video1{
+		width: 72%;
+	}
+	.link-video1 h3{
+		margin-top: 30px;
+		text-align: center;
+		font-size: large;
+		width: 160px;
+	}
+	.link-video2{
+		width: 72%;
+	}
+	.link-video2 h3{
+		margin-top: 30px;
+		text-align: center;
+		font-size: large;
+		width: 160px;
+	}
+	.nextprev{
+		width: 77.5%;
+		font-size: large;
+		gap: 20px;
+	}
+	.stream-deskripsi .imgdes{
+		width: 78%;
+	}
+	.stream-deskripsi h3{
+		width: 72%;
+	}
+	.stream-deskripsi .genrestatus{
+		width: 72%;
+	}
+	.stream-deskripsi text {
+		width: 72%;
+	}
+
+
+
+	.footer{
+		width: 78.1%;
+	}
+}
+/*@media screen and (max-width: 768px){
 	.navbar .menu.aktif{
 		width: 400px;
 		top: 195px;
 	}
-}
+}*/
 
 
 
