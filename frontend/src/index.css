@@ -685,6 +685,7 @@
 		font-size: 13px;
 	}
 }
+/* RESPONSIVE TABLET */
 @media screen and (max-width: 884px){
 	.wrap {
 		height: 500vh;
@@ -987,7 +988,7 @@
 		margin-top: 10px;
 		display: grid;
 		grid-template-columns: repeat(6, 1fr);
-		grid-template-rows: 1fr 100px 100px 1fr;
+		grid-template-rows: 1fr 115px 100px 1fr;
 		grid-template-areas: 
 		"strimg strimg strimg strimg strimg strimg"
 		"strtitle strtitle strtitle strtitle strtitle strtitle"
@@ -1137,7 +1138,7 @@
 		gap: 10px;
 	}
 }
-
+/* RESPONSIVE MOBILE */
 @media screen and (max-width: 428px){
 	.wrap {
 		width: 99.5%;
@@ -1276,6 +1277,7 @@
 	}
 	.deskripsi {
 		margin-top: 10px;
+		width: 91.5%;
 		grid-area: deskripsi;
 		display: grid;
 		grid-template-columns: 5px 95px 100px 100px 95px 5px;
@@ -1350,37 +1352,41 @@
 		display: grid;
 		height: 595vh;
 		grid-template-columns:5px 95px 100px 100px 95px 5px;
-		grid-template-rows: 70px 100px 200px 100px 40px 40px 40px 200px;
+		grid-template-rows: 70px 50px 200px 70px 40px 40px 40px 200px;
 	}
 	.video-container .title{
-		width: 385px;
+		width: 380px;
 	}
 	.banner3{
 
-		width: 93%;
+		width: 91%;
+		height: auto;
 	}
 	.banner3 a{
 		width: 400px;
+		height: auto;
 
 	}
 	.banner3 a .ban3{
-		width: 400px;
-		height: 90px;
+		width: 380px;
+		height: auto;
 	}
 	.banner4{
 
-		width: 93%;
+		width: 91%;
+		height: auto;
 	}
 	.banner4 a{
 		width: 400px;
+		height: auto;
 
 	}
 	.banner4 a .ban4{
-		width: 400px;
-		height: 90px;
+		width: 380px;
+		height: auto;
 	}
 	.video-container .video{
-		margin-left:20px;
+		margin-left:15px;
 		width: 350px;
 		height: 200px;
 	}
@@ -1389,28 +1395,38 @@
 		height: 200px;
 	}
 	.link-video1 {
-		width: 400px;
+		width: 380px;
+	}
+	.link-video1 h3{
+		font-size: medium;
 	}
 	.link-video2 {
-		width: 400px;
+		width: 380px;
+	}
+	.link-video2 h3{
+		font-size: medium;
 	}
 	.nextprev{
-		width: 410px;
+		margin-left: 12px;
+		width: 380px;
 		font-size: medium;
 		gap: 100px;
+	}
+	.stream-deskripsi{
+		width: 92.3%;
 	}
 	.stream-deskripsi .imgdes{
 		width: 410px;
 	}
 	.stream-deskripsi h3{
-		width: 390px;
+		width: 386px;
 		height: 30px;
 	}
 	.stream-deskripsi .genrestatus{
-		width: 390px;
+		width: 386px;
 	}
 	.stream-deskripsi text {
-		width: 390px;
+		width: 386px;
 	}
 	
 }
@@ -1547,6 +1563,7 @@
 	}
 	.deskripsi {
 		margin-top: 10px;
+		width: 88%;
 		grid-area: deskripsi;
 		display: grid;
 		grid-template-columns: 5px 95px 100px 100px 95px 5px;
@@ -1624,7 +1641,7 @@
 		display: grid;
 		height: 595vh;
 		grid-template-columns:5px 95px 100px 100px 95px 5px;
-		grid-template-rows: 70px 100px 200px 100px 40px 40px 40px 200px;
+		grid-template-rows: 70px 50px 200px 70px 40px 40px 40px 200px;
 	}
 	.video-container .title{
 		width: 84.2%;
@@ -1634,24 +1651,22 @@
 		width: 89%;
 	}
 	.banner3 a{
-		width: 400px;
+		width: 100%;
 
 	}
 	.banner3 a .ban3{
-		width: 400px;
-		height: 90px;
+		width: 100%;
 	}
 	.banner4{
 
 		width: 89%;
 	}
 	.banner4 a{
-		width: 400px;
+		width: 100%;
 
 	}
 	.banner4 a .ban4{
-		width: 400px;
-		height: 90px;
+		width: 100%;
 	}
 	.video-container .video{
 		margin-left:20px;
@@ -1666,33 +1681,35 @@
 		width: 85%;
 	}
 	.link-video1 h3{
-		text-align: center;
-		font-size: large;
+		font-size: medium;
 	}
 	.link-video2 {
 		width: 85%;
 	}
 	.link-video2 h3{
-		text-align: center;
-		font-size: large;
+		font-size: medium;
 	}
 	.nextprev{
+		margin-left: 0;
 		width: 89.7%;
 		font-size: medium;
 		gap: 100px;
 	}
+	.stream-deskripsi{
+		width: 88.8%;
+	}
 	.stream-deskripsi .imgdes{
-		width: 91%;
+		width: 100%;
 	}
 	.stream-deskripsi h3{
-		width: 84.3%;
+		width: 94.8%;
 		height: 30px;
 	}
 	.stream-deskripsi .genrestatus{
-		width: 84.3%;
+		width: 94.8%;
 	}
 	.stream-deskripsi text {
-		width: 84.3%;
+		width: 94.8%;
 	}
 	.footer{
 		width: 90.5%;
@@ -1760,6 +1777,9 @@
 	.content .card .item-animes .text{
 		width: 150px;
 	}
+	.deskripsi{
+		width: 83%;
+	}
 	.deskripsi .imgdesanime{
 		width: 60%;
 	}
@@ -1803,26 +1823,28 @@
 		width: 80.5%;
 	}
 	.banner3{
-		margin-left: -2%;
-		width: 80%;
+		width: 83.8%;
+		height: auto;
 	}
 	.banner3 a{
 		width: 100%;
-		height: 100%;
+		height: auto;
 	}
 	.banner3 a .ban3{
-		width: 360px;
+		width: 100%;
+		height: auto;
 	}
 	.banner4{
-		margin-left: -2%;
-		width: 80%;
+		width: 83.8%;
+		height: auto;
 	}
 	.banner4 a{
 		width: 100%;
-		height: 100%;
+		height: auto;
 	}
 	.banner4 a .ban4{
-		width: 360px;
+		width: 100%;
+		height: auto;
 	}
 	.video-container .video{
 		width: 70%;
@@ -1831,36 +1853,37 @@
 		width: 80%;
 	}
 	.link-video1 h3{
-		margin-top: 23px;
 		text-align: center;
-		font-size: large;
+		font-size: medium;
 		width: 160px;
 	}
 	.link-video2{
 		width: 80%;
 	}
 	.link-video2 h3{
-		margin-top: 23px;
 		text-align: center;
-		font-size: large;
+		font-size: medium;
 		width: 160px;
 	}
 	.nextprev{
-		width: 84.3%;
+		width: 85%;
 		font-size: large;
 		gap: 20px;
 	}
+	.stream-deskripsi{
+		width: 84%;
+	}
 	.stream-deskripsi .imgdes{
-		width: 85%;
+		width: 100%;
 	}
 	.stream-deskripsi h3{
-		width: 79%;
+		width: 94.7%;
 	}
 	.stream-deskripsi .genrestatus{
-		width: 79%;
+		width: 94.7%;
 	}
 	.stream-deskripsi text {
-		width: 79%;
+		width: 94.7%;
 	}
 
 
@@ -1904,6 +1927,9 @@
 	}
 	.content .card .item{
 		grid-template-columns: repeat(2, 142px);
+	}
+	.deskripsi{
+		width: 80%;
 	}
 	.deskripsi .imgdesanime{
 		width: 57%;
@@ -1972,64 +1998,61 @@
 		width: 75.5%;
 	}
 	.banner3{
-		margin-left: -2.5%;
-		width: 84.5%;
+		width: 81%;
+		height: auto;
 	}
 	.banner3 a{
 		width: 100%;
-		height: 100%;
+		height: auto;
 	}
 	.banner3 a .ban3{
-		width: 350px;
+		width: 100%;
 	}
 	.banner4{
-		margin-left: -2.5%;
-		width: 84.5%;
+		width: 81%;
+		height: auto;
 	}
 	.banner4 a{
 		width: 100%;
-		height: 100%;
+		height: auto;
 	}
 	.banner4 a .ban4{
-		width: 350px;
+		width: 100%;
 	}
 	.video-container .video{
 		width: 66.8%;
 	}
 	.link-video1{
-		width: 75.5%;
+		width: 77%;
 	}
 	.link-video1 h3{
-		margin-top: 30px;
-		text-align: center;
-		font-size: large;
-		width: 160px;
+		font-size: small;
 	}
 	.link-video2{
-		width: 75.5%;
+		width: 77%;
 	}
 	.link-video2 h3{
-		margin-top: 30px;
-		text-align: center;
-		font-size: large;
-		width: 160px;
+		font-size: small;
 	}
 	.nextprev{
-		width: 81%;
+		width: 81.5%;
 		font-size: large;
 		gap: 20px;
 	}
+	.stream-deskripsi{
+		width: 81%;
+	}
 	.stream-deskripsi .imgdes{
-		width: 82%;
+		width: 100%;
 	}
 	.stream-deskripsi h3{
-		width: 75.5%;
+		width: 94%;
 	}
 	.stream-deskripsi .genrestatus{
-		width: 75.5%;
+		width: 94%;
 	}
 	.stream-deskripsi text {
-		width: 75.5%;
+		width: 94%;
 	}
 
 
@@ -2075,6 +2098,9 @@
 	}
 	.content .card .item{
 		grid-template-columns: repeat(2, 134px);
+	}
+	.deskripsi{
+		width: 75.9%;
 	}
 	.deskripsi .imgdesanime{
 		width: 50%;
@@ -2143,48 +2169,64 @@
 		width: 72%;
 	}
 	.banner3{
-		width: 71%;
+		width: 76.8%;
+		height: auto;
+	}
+	.banner3 a{
+		width: 100%;
+		height: auto;
+	}
+	.banner3 a .ban3{
+		width: 100%;
 	}
 	.banner4{
-		width: 71%;
+		width: 76.8%;
+		height: auto;
+	}
+	.banner4 a{
+		width: 100%;
+		height: auto;
+	}
+	.banner4 a .ban4{
+		width: 100%;
 	}
 	.video-container .video{
-		width: 63%;
+		width: 63.5%;
+	}
+	.video-container .video iframe{
+		width: 99%;
 	}
 	.link-video1{
-		width: 72%;
+		width: 73%;
 	}
 	.link-video1 h3{
-		margin-top: 30px;
-		text-align: center;
-		font-size: large;
-		width: 160px;
+		font-size: small;
 	}
 	.link-video2{
-		width: 72%;
+		width: 73%;
 	}
 	.link-video2 h3{
-		margin-top: 30px;
-		text-align: center;
-		font-size: large;
-		width: 160px;
+		font-size: small;
 	}
 	.nextprev{
-		width: 77.5%;
+		width: 78.2%;
 		font-size: large;
 		gap: 20px;
 	}
+	.stream-deskripsi{
+		width: 77.5%;
+	}
 	.stream-deskripsi .imgdes{
-		width: 78%;
+		width: 100%;
 	}
 	.stream-deskripsi h3{
-		width: 72%;
+		width: 94%;
 	}
 	.stream-deskripsi .genrestatus{
-		width: 72%;
+		width: 94%;
 	}
 	.stream-deskripsi text {
-		width: 72%;
+		width: 94%;
 	}
 
 
@@ -2195,7 +2237,6 @@
 }
 @media screen and (max-width: 320px){
 	.wrap{
-		border: 2px solid red;
 		width: 100%;
 	}
 	.banner{
@@ -2236,17 +2277,20 @@
 		grid-template-columns: repeat(2, 115px);
 		grid-template-rows: repeat(5, 320px);
 	}
+	.deskripsi{
+		width: 66%;
+	}
 	.deskripsi .imgdesanime{
-		width: 50%;
+		width: 30%;
 	}
 	.deskripsi h3{
-		width: 72.5%;
+		width: 62.2%;
 	}
 	.deskripsi .genrestatus{
-		width: 72.5%;
+		width: 62.2%;
 	}
 	.deskripsi text{
-		width: 72.5%;
+		width: 62.2%;
 	}
 	.content .text{
 		width: 110px;
@@ -2316,29 +2360,29 @@
 		width: 63.8%;
 	}
 	.banner3{
-		margin-left: -2.5%;
-		width: 84.5%;
+		width: 67.5%;
+		height: auto;
 	}
 	.banner3 a{
 		width: 100%;
-		height: 100%;
+		height: auto;
 	}
 	.banner3 a .ban3{
-		width: 295px;
+		width: 100%;
 	}
 	.banner4{
-		margin-left: -2.5%;
-		width: 84.5%;
+		width: 67.5%;
+		height: auto;
 	}
 	.banner4 a{
 		width: 100%;
-		height: 100%;
+		height: auto;
 	}
 	.banner4 a .ban4{
-		width: 295px;
+		width: 100%;
 	}
 	.video-container .video{
-		width: 55%;
+		width: 54.5%;
 	}
 	.video-container .video iframe{
 		width: 100%;
@@ -2347,10 +2391,7 @@
 		width: 64%;
 	}
 	.link-video1 h3{
-		margin: 0;
-		text-align: center;
-		font-size: medium;
-		width: 150px;
+		font-size: small;
 	}
 	.video-container .link-video1 button{
 		font-size: medium;
@@ -2359,10 +2400,7 @@
 		width: 64%;
 	}
 	.link-video2 h3{
-		margin: 0;
-		text-align: center;
-		font-size: medium;
-		width: 150px;
+		font-size: small;
 	}
 	.video-container .link-video2 button{
 		font-size: medium;
@@ -2372,19 +2410,23 @@
 		font-size: medium;
 		gap: 20px;
 	}
+	.stream-deskripsi{
+		width: 68.2%;
+	}
 	.stream-deskripsi .imgdes{
-		width: 70%;
+		width: 100%;
 	}
 	.stream-deskripsi h3{
-		width: 63.8%;
+		width: 93.5%;
+		height: 20px;
 		font-size: large;
 	}
 	.stream-deskripsi .genrestatus{
-		width: 63.8%;
+		width: 93.5%;
 		font-size: medium;
 	}
 	.stream-deskripsi text {
-		width: 63.8%;;
+		width: 93.5%;
 		font-size: medium;
 	}
 
@@ -2393,56 +2435,4 @@
 	.footer{
 		width: 68.5%;
 	}
-}
-/*@media screen and (max-width: 768px){
-	.navbar .menu.aktif{
-		width: 400px;
-		top: 195px;
-	}
-}*/
-
-
-
-/* @media screen and (max-width: 768px){
-	.wrap {
-		height: 250vh;
-		grid-template-rows:100px 60px 1800px 100px;
-	}
-	.navbar .menu {
-		display: none;
-	}
- 
-	.navbar .menu.aktif{
-		display:inline-block;
-		position: absolute;
-		bottom: 200px;
-		background: whitesmoke;
-		padding: 10px 20px;
-		right: 0;
-		left: 0;
-	}
- 
-	.navbar .menu.aktif li a{
-		padding: 10px;
-		display: inline-block !important;
-	}
- 
-	.navbar .tombol {
-		display: block;
-	}
-	.content .container {
-		grid-template-rows: 0.2fr 1700px;
-	}
-	.content .card .item {
-	height: 200vh;
-	grid-template-columns: repeat(2,1fr);
-	grid-template-rows: repeat(5, 300px);
-	}
-	.content img {
-	width: 100%;
-	height: auto;
-}
-
-
-
 }
