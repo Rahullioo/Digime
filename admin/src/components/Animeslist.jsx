@@ -88,7 +88,7 @@ const Animeslist = () => {
                         {animes.map((anime)=>(
                             <tr key={anime.uuid}>
                                 <td className='has-text-centered is-vcentered'>{anime.id}</td>
-                                <td className='has-text-centered is-vcentered'>{anime.title}</td>
+                                <td className='anime-title' style={{width:"450px",overflow:"hidden",textAlign:"center",justifyContent:"center",alignItems:"center"}}>{anime.title}</td>
                                 <td className='has-text-centered is-vcentered'>
                                     <div className="card-image has-text-centered">
                                         <figure className="image is-64x64 is-inline-block">

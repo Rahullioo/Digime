@@ -93,7 +93,7 @@ const Episodeslist = () => {
                             return (
                                 <tr key={episode.uuid}>
                                     <td className='has-text-centered is-vcentered'>{episode.anime.id}</td>
-                                    <td className='has-text-centered is-vcentered'>{episode.anime.title}</td>
+                                    <td className='episodes-title' style={{width:"450px",overflow:"hidden",textAlign:"center",justifyContent:"center",alignItems:"center"}}>{episode.anime.title}</td>
                                     <td className='has-text-centered is-vcentered'>{episode.episode}</td>
                                     <td className='has-text-centered is-vcentered'>{date.toLocaleTimeString("id-ID", options)}</td>
                                     <td className='has-text-centered is-vcentered'>Ada</td>
